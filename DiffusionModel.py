@@ -63,7 +63,7 @@ class DiffusionModel:
         return decoded_images
 
     def initialize_opt_loss_function(self):
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.0002)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.00005)
         self.loss_function = torch.nn.functional.mse_loss
 
     def train_model(self, dataset, epochs, device, latent_size, starting_epoch=1):
